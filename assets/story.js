@@ -16,12 +16,12 @@ let companionPower = Math.floor(Math.random() * (8 - 4 + 1)) + 4;
 
 
 
-let path1 = prompt("Tüm gün boyunca at sürdüğün için kendini yorgun hissediyorsun. Uzaklarda bir köyden dumanlar çiktigini gördün. Bu senin için dinlenme firsati olabilir. Köye dogru atini sürmek istiyor musun? ")
+let path1 = prompt("Tüm gün boyunca at sürdüğün için kendini yorgun hissediyorsun. Uzaklarda bir köyden dumanlar çiktigini gördün. Bu senin için dinlenme firsati olabilir. Köye dogru atini sürmek istiyor musun? (evet/hayir) ")
 
 if (path1 === "evet") {
     console.log("köye dogru ilerlemeye karar verdin. Köye yaklastikca bir seylerin ters gittiğini anliyorsun. Atin huysuzlanmaya basladi. Köye girdiginde harsilastigin manzara korkunc. Yikilmis evler, üst üste yigilmis ceset yiginlari bu köyün ne hale geldiğini sana gösteriyor. Köyün meydaninda asilmis yasli bir adam var. Bu adam köyün lideri olmali. Ölmeden önce iskence görmüs. Vücudunda bicak yaralari var. Bu yaralar canavarlar tarafindan yapilmisa benzemiyor. Köyün icinde canli belirtisi var mi diye inceliyorsun. Köyün arkalarinda bagirisma sesleri duyuyorsun. Silahini yanina alip seslerin oldugu bölgeye gitme karari aldin!")
 
-    path1_2 = prompt("Seslerin geldigi yöne geldiginde bu köyün neden bu hale geldigini anliyorsun. Haydutlar! Haydutlar önünde genc bir kiza saldiriyor. 'Bir tanesi seni farkediyor: Sayimiz fazla. Bela istemiyorsan buradan uzaklas!' Genc kiz yardim istercesine sana bakiyor, ne yapacaksin?`");
+    path1_2 = prompt("Seslerin geldigi yöne geldiginde bu köyün neden bu hale geldigini anliyorsun. Haydutlar! Haydutlar önünde genc bir kiza saldiriyor. 'Bir tanesi seni farkediyor: Sayimiz fazla. Bela istemiyorsan buradan uzaklas!' Genc kiz yardim istercesine sana bakiyor, ne yapacaksin?` (saldir/saldirma)");
 
     if (path1_2 === "saldir") {
         if (adventurerPower > banditPower) {
@@ -40,20 +40,20 @@ if (path1 === "evet") {
 
     console.log("Atini kuzeye ceviriyorsun. Şehre ulasmana az kalmis olabilir. Şu an dinlenmenin sirasi değil!");
 
-    path2_2 = prompt("sehre geldin. Çok aç ve yorgun hissediyorsun. Tam bir han bulmuşken kapida bir adam sana mektup uzatiyor. Mektupta Horadrim kardesliginin seni cagirdigi yaziyor. Biraz dinlenmek mi yoksa Horadrim'in davetini kabul etmek mi istersin? ")
+    path2_2 = prompt("sehre geldin. Çok aç ve yorgun hissediyorsun. Tam bir han bulmuşken kapida bir adam sana mektup uzatiyor. Mektupta Horadrim kardesliginin seni cagirdigi yaziyor. Biraz dinlenmek mi yoksa Horadrim'in davetini kabul etmek mi istersin? (dinlen/git) ")
     
     if(path2_2 === "dinlen") {
         console.log("Dinlenmenin iyi bir fikir oldugunu düsünüp en yakin han'a giriyorsun. Sonraki gün icin oyun kaydediliyor :D ");
     }else if (path2_2 === "git") {
         console.log ("Mektupta yazili olan yere gidiyorsun. Seni karsilayan içlerindeki en yasli kişi oluyor." + `hosgeldin ${adventurerName} burada neden oldugunu anlamis olmalisin. Öncelikle kendimi tanitayim. Ben Methem, Horadrim üyelerindenim. Uzun süredir diğer üyelerden bazi seylerin ters gittiği hakkinda rapor aliyoruz. Kücük bir sehrin ansizin kayboldugu bilgisine ulastik. Üyelerimizden iki kisi göndermemize rağmen geri dönmediler. Korktugumuz senaryo basimiza gelmiş olabilir. Gök haritasi felaketi gösteriyor` );
-        path3 = prompt ("Senin bizim icin bir ekip üyemiz ile bu kaybolan sehre gitmeni istiyoruz. Bunun karsiliginda cömertce ödüllendirileceksin. Kabul etmezsen ve korktugumuz senaryo basimiza gelirse bu durumdan pismanlik duyacagina eminim. İçindeki merak ve Methem'in bu sözlerinden sonra kaybolmus sehre gitme karari aliyorsun")
+        path3 = prompt ("Senin bizim icin bir ekip üyemiz ile bu kaybolan sehre gitmeni istiyoruz. Bunun karsiliginda cömertce ödüllendirileceksin. Kabul etmezsen ve korktugumuz senaryo basimiza gelirse bu durumdan pismanlik duyacagina eminim. İçindeki merak ve Methem'in bu sözlerinden sonra kaybolmus sehre gitme karari aliyorsun (yola cik)")
         if(path3 === "yola cik") {
             console.log("yola cikmak icin atini ve silahlarini hazirliyorsun, biraz dinlenip horadrim üyesi ile birlikte yola cikiyorsun")
         } else (alert("hikaye ilerlemesi icin tek secenek 'yola cik' "))
 
         console.log("Şehrin cikisinda genc bir savasci görüyorsun. Sarisin uzun saclari gün batiminda altin renginde parildiyor. Yasi genc olmasina karsin ne kadar bilgiye sahip oldugunu tahmin edebiliyorsun Seni görüyor ve yanina gelip kendini tanitiyor:" +  `Seninle tanismayi sabirsizlikla bekliyordum. Ben ${companion}. Horadrim'in en genc üyesiyim. Dünyada cok garip seyler olmaya basladi. Gidip su sehirde neler oluyor bir bakalim. ` )
 
-        path3_1 = prompt ("Kaybolmus sehre geldiginizde gercekten de sehrin yerinde olmadigini görüyorsun. Sanki tüm sehirdeki binalar yok olmuscasina yerlerinde yoklar. Sanki karanlik burada daha güclü gibi görünüyor. Meşale bile korkudan sönecekmişcesine yaniyor. Ama burada eskiden bir sehrin olduguna dair izler görüyorsun. Cesetler ve burada yasayan halkin yaptigi bir meydan. Ne oldugunu anlamadan karanliktan üstünüze dogru bir yaratik saldiriyor. Son anda yana cekilerek bu atagi savusturuyorsunuz. Karsinda devasa büyüklükte, yarasa ve at karisimi, metrelerce büyüklükte kanatlari olan bir yaratik var! Sen ne olup bittigini anlamaya calisirken" + `${companion} saskinlikla:'Bu olamaz! Galdûrûn!! Bu yaratik sadece eski efsanelerde var. Karanlikla birlikte hepsi yok edilmisti. Bu nasil olur' diyor. Bu esnada yaratik kana susamiscasina tekrar saldiriya geciyor. Çabuk karar vermeniz gerekiyor. Ne yapacaksiniz? `)
+        path3_1 = prompt ("Kaybolmus sehre geldiginizde gercekten de sehrin yerinde olmadigini görüyorsun. Sanki tüm sehirdeki binalar yok olmuscasina yerlerinde yoklar. Sanki karanlik burada daha güclü gibi görünüyor. Meşale bile korkudan sönecekmişcesine yaniyor. Ama burada eskiden bir sehrin olduguna dair izler görüyorsun. Cesetler ve burada yasayan halkin yaptigi bir meydan. Ne oldugunu anlamadan karanliktan üstünüze dogru bir yaratik saldiriyor. Son anda yana cekilerek bu atagi savusturuyorsunuz. Karsinda devasa büyüklükte, yarasa ve at karisimi, metrelerce büyüklükte kanatlari olan bir yaratik var! Sen ne olup bittigini anlamaya calisirken" + `${companion} saskinlikla:'Bu olamaz! Galdûrûn!! Bu yaratik sadece eski efsanelerde var. Karanlikla birlikte hepsi yok edilmisti. Bu nasil olur' diyor. Bu esnada yaratik kana susamiscasina tekrar saldiriya geciyor. Çabuk karar vermeniz gerekiyor. Ne yapacaksiniz? (saldir/kac)`)
 
         if (path3_1 === "saldir") {
             if ( (adventurerPower + companionPower) >= monsterPower) {
